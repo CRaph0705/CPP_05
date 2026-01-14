@@ -6,12 +6,12 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:29:52 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/14 14:39:10 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/14 14:39:05 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
 #include <iostream>
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"

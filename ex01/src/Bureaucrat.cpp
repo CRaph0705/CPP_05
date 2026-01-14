@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:33:23 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/14 15:25:58 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/14 15:37:37 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,20 @@ void	Bureaucrat::decrementGrade()
 	this->_grade++;
 }
 
+void	Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->getName() << " couldn't sign " << form.getName() << " because ";
+		std::cerr << e.what() << '\n';
+	}
+	
+}
 
 std::ostream &operator<<(std::ostream& stream, const Bureaucrat &bureaucrat)
 {
