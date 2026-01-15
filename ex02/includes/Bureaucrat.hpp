@@ -6,15 +6,15 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:33:26 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/14 15:37:41 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/15 17:55:17 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -33,7 +33,7 @@ class Bureaucrat
 		void				setGrade(int grade);
 		void				incrementGrade();
 		void				decrementGrade();
-		void				signForm(Form &form);
+		void				signForm(AForm &form);
 	class GradeTooHighException : public std::exception
 	{
 		const char* what() const throw() {return "Grade is too high.";};

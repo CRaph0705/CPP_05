@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 10:57:51 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/14 16:43:03 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/15 18:02:01 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class	Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 		const std::string	_name;
@@ -24,11 +24,11 @@ class Form
 		const int 			_signatory_grade;
 		const int 			_execution_grade;
 	public:
-		Form( void );
-		~Form( void );
-		Form( const Form &cpy);
-		Form( std::string name, bool is_signed, int signatory_grade, int execution_grade);
-		Form &operator=( const Form &cpy );
+		AForm( void );
+		~AForm();
+		AForm( const AForm &cpy);
+		AForm( std::string name, bool is_signed, int signatory_grade, int execution_grade);
+		AForm &operator=( const AForm &cpy );
 
 		class GradeTooHighException : public std::exception
 		{
@@ -40,7 +40,7 @@ class Form
 			const char* what() const throw() {return "Grade is too low.";};
 		} ;
 
-		class FormAlreadySignedException : public std::exception
+		class AFormAlreadySignedException : public std::exception
 		{
 			const char* what() const throw() {return "Form is already signed";};
 		} ;
@@ -54,4 +54,4 @@ class Form
 
 } ;
 
-std::ostream &operator<<(std::ostream& stream, const Form& form);
+std::ostream &operator<<(std::ostream& stream, const AForm& form);
