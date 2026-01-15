@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 10:57:57 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/14 16:03:10 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/15 17:06:51 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ Form::~Form( void )
 	std::cout << "Form destructor function called." << std::endl;
 }
 
-Form::Form( const Form &cpy) : _name(cpy._name), _is_signed(cpy._is_signed), _signatory_grade(cpy._signatory_grade), _execution_grade(cpy._execution_grade)
+Form::Form( const Form &cpy) : _name(cpy._name), _signatory_grade(cpy._signatory_grade), _execution_grade(cpy._execution_grade)
 {
 	std::cout<< "Form copy constructor function called" << std::endl;
-	(void)cpy;
+	this->_is_signed = cpy._is_signed;
 }
 Form::Form( std::string name, bool is_signed, int signatory_grade, int execution_grade) : _name(name), _is_signed(is_signed), _signatory_grade(signatory_grade), _execution_grade(execution_grade)
 {
@@ -37,7 +37,7 @@ Form::Form( std::string name, bool is_signed, int signatory_grade, int execution
 Form& Form::operator=( const Form &cpy )
 {
 	std::cout<< "Form overloaded operator= function called" << std::endl;
-	(void)cpy;
+	this->_is_signed = cpy._is_signed;
 	return (*this);
 }
 

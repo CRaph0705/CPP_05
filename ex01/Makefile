@@ -6,7 +6,7 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/08 11:28:21 by rcochran          #+#    #+#              #
-#    Updated: 2026/01/14 14:27:27 by rcochran         ###   ########.fr        #
+#    Updated: 2026/01/15 14:00:47 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,10 +21,11 @@ INCLUDES	=	-I ./includes -MMD -MP
 FILES		= 	$(SRC)Bureaucrat.cpp \
 				$(SRC)Form.cpp \
 				$(MAIN)
+EXT			=	.cpp
 
-OBJ			=	$(patsubst $(SRC)%.cpp, $(OBJ_DIR)%.o, $(FILES))
+OBJ			=	$(patsubst $(SRC)%$(EXT), $(OBJ_DIR)%.o, $(FILES))
 
-MAIN		= 	$(SRC)main.cpp
+MAIN		= 	$(SRC)main$(EXT)
 all : $(NAME)
 
 clean :
