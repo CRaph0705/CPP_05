@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:47:25 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 14:48:47 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 16:41:33 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@
 class PresidentialPardonForm : public AForm
 {
 	private:
-
+		PresidentialPardonForm(void);
 	public:
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(const PresidentialPardonForm &cpy);
+		PresidentialPardonForm &operator=(const PresidentialPardonForm &cpy);
+		~PresidentialPardonForm();
+
 		void		execute(Bureaucrat const &executor)const;
 } ;
