@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:33:26 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/15 17:55:17 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:49:18 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ class Bureaucrat
 	{
 		const char* what() const throw() {return "Grade is too low.";};
 	} ;
+
+	void	executeForm(AForm const & form) const;
 } ;
 std::ostream &operator<<(std::ostream& stream, const Bureaucrat& bureaucrat);

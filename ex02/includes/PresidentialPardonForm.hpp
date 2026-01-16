@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:47:25 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/15 17:58:43 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:48:47 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ class PresidentialPardonForm : public AForm
 	private:
 
 	public:
+		void		execute(Bureaucrat const &executor)const;
 } ;

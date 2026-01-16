@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:45:48 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 14:42:17 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:59:26 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 /* ************************************************************************* */
 
-int		ShrubberyCreationForm::CreateFile()
+int		ShrubberyCreationForm::CreateFile() const
 {
 	std::ofstream	outfile;
 	std::string		filename;
@@ -59,7 +59,7 @@ int		ShrubberyCreationForm::CreateFile()
 	return (0);
 }
 
-int	ShrubberyCreationForm::PlantTree( std::string filename )
+int	ShrubberyCreationForm::PlantTree( std::string filename ) const
 {
 	std::ofstream	outfile;
 
@@ -85,6 +85,9 @@ int	ShrubberyCreationForm::PlantTree( std::string filename )
 
 void		ShrubberyCreationForm::execute(Bureaucrat const &executor)const
 {
-	(void) executor;
+	if (executor.getGrade() > this->getExecutionGrade())
+		throw AForm::GradeTooLowException();
+	else
+		this->CreateFile();
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:33:23 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/15 17:55:29 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:02:21 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,21 @@ void	Bureaucrat::signForm(AForm &form)
 	}
 	
 }
+
+void	Bureaucrat::executeForm(AForm const & form) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	return ;
+}
+
 
 std::ostream &operator<<(std::ostream& stream, const Bureaucrat &bureaucrat)
 {

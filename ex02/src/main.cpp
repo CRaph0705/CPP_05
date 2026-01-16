@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:28:07 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 14:39:56 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:02:00 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int	main()
 {
 	/* DEFAULT CASE */
-	Bureaucrat b("toto", 5);
+	Bureaucrat b("toto", 148);
 	std::cout << b << std::endl;
 	ShrubberyCreationForm test("toto");
 
-	test.CreateFile();
+	b.executeForm(test);
 	
 	// try
 	// {	
