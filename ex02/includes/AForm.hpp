@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 10:57:51 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 14:38:38 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:11:05 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,14 @@ class AForm
 			const char* what() const throw() {return "Grade is too low.";};
 		} ;
 
-		class AFormAlreadySignedException : public std::exception
+		class FormAlreadySignedException : public std::exception
 		{
-			const char* what() const throw() {return "Form is already signed";};
+			const char* what() const throw() {return "Form is already signed.";};
+		} ;
+		
+		class FormNotSignedException : public std::exception
+		{
+			const char* what() const throw() {return "Form isn't signed, cannot proceed to its execution.";};
 		} ;
 
 		const std::string	getName() const;

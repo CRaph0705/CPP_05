@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:33:23 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 15:02:21 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:17:24 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ void	Bureaucrat::executeForm(AForm const & form) const
 	}
 	catch(const std::exception& e)
 	{
+		std::cerr << this->getName() << " couldn't execute " << form.getName() << " because ";
 		std::cerr << e.what() << '\n';
 	}
 	return ;

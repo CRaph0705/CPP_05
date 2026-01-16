@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 10:57:57 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 14:05:08 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:11:19 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ bool	AForm::getIsSigned() const
 void	AForm::beSigned(Bureaucrat &b)
 {
 	if (_is_signed)
-		throw AForm::AFormAlreadySignedException();
+		throw AForm::FormAlreadySignedException();
 	if (b.getGrade() >= this->getSignatoryGrade())
 		throw AForm::GradeTooLowException();
 	_is_signed = true;

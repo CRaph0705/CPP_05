@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:45:48 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 14:59:26 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:11:11 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ int	ShrubberyCreationForm::PlantTree( std::string filename ) const
 
 void		ShrubberyCreationForm::execute(Bureaucrat const &executor)const
 {
+	if (!this->getIsSigned())
+		throw AForm::FormNotSignedException();
 	if (executor.getGrade() > this->getExecutionGrade())
 		throw AForm::GradeTooLowException();
 	else
