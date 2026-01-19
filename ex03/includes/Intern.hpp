@@ -10,7 +10,7 @@
 class Intern
 {
 	private :
-	
+
 	public :
 	Intern( void );
 	Intern( const Intern &cpy );

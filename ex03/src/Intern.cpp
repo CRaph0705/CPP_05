@@ -1,6 +1,29 @@
 #include "Intern.hpp"
 
 
+Intern::Intern( void )
+{
+	std::cout << "Intern default constructor function called." << std::endl;
+}
+
+Intern::Intern( const Intern &cpy )
+{
+	(void)cpy;
+	std::cout << "Intern copy constructor function called." << std::endl;
+}
+
+Intern::~Intern( )
+{
+	std::cout << "Intern destructor function called." << std::endl;
+}
+
+Intern &Intern::operator=(const Intern &cpy)
+{
+	(void)cpy;
+	std::cout << "Intern overloaded operator= function called." << std::endl;
+	return (*this);
+}
+
 AForm	*Intern::makePresidentialPardonForm(const std::string target)
 {
 	return (new PresidentialPardonForm(target));
@@ -16,16 +39,8 @@ AForm	*Intern::makeShrubberyCreationForm(const std::string target)
 	return (new ShrubberyCreationForm(target));
 }
 
-
 AForm *Intern::makeForm(std::string formName, const std::string formTarget)
 {
-	// AForm *(*constructors[])(const std::string target) = {
-	// 	Intern::&makePresidentialPardonForm,
-	// 	Intern::&makeRobotomyRequestForm,
-	// 	Intern::&makeShrubberyCreationForm
-	// };
-
-
 	AForm *(Intern::*makers[])(const std::string target) =
 	{
 		&Intern::makePresidentialPardonForm,

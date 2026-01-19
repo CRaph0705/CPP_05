@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 10:57:51 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 15:11:05 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/19 16:48:33 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class AForm
 		const std::string	_target;
 	public:
 		AForm( void );
-		~AForm();
+		virtual ~AForm();
 		AForm( const AForm &cpy);
 		AForm( std::string name, bool is_signed, int signatory_grade, int execution_grade, std::string target);
 		AForm &operator=( const AForm &cpy );

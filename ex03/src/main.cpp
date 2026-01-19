@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:28:07 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/19 13:56:07 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/19 16:49:01 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,17 @@
 
 int	main()
 {
-	/* DEFAULT CASE */
 	Bureaucrat b("pouet", 1);
 	std::cout << b << std::endl;
 
-	/* ************************************ ************************************ */
-	
-	/* ************************** SHRUBBERY FORM TEST ************************** */
+	Intern someRandomIntern;
+	AForm* rrf;
+	rrf = someRandomIntern.makeForm("PresidentialPardonForm", "Bender");
 
-	// ShrubberyCreationForm test("toto");
-	// Bureaucrat b2("pouet2", 148);
-	// b.signForm(test);
-	// b2.executeForm(test);
-	
-	/* ************************** ROBOTOMY FORM TEST  ************************** */
-	
-	// RobotomyRequestForm robotest("toto");
-	// b.signForm(robotest);
-	// b.executeForm(robotest);
-	// std::cout << "display form : " << robotest;
-	/* ********************* PRESIDENTIAL PARDON FORM TEST ********************* */
-
-
-	
-	// try
-	// {	
-	// 	AForm f ("form test", 0, 10, 140);
-	// 	std::cout << f << std::endl;
-	// 	b.signForm(f);
-	// 	b.signForm(f);
-	// 	std::cout << f << std::endl;
-	// }
-	// catch(std::exception &e)
-	// {
-	// 	std::cerr << e.what() << std::endl;
-	// }
+	if (!rrf)
+		return (0);
+	b.signForm(*rrf);
+	b.executeForm(*rrf);
+	delete (rrf);
 	return (0);
 }

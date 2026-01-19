@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:47:05 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 16:50:57 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/01/19 16:40:24 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 PresidentialPardonForm: Required grades: sign 25, exec 5
 Informs that <target> has been pardoned by Zaphod Beeblebrox.
  */
-
-
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm("PresidentialPardonForm", 0, 25, 5, target)
 {
 	std::cout << "PresidentialPardonForm overloaded constructor function called." << std::endl;
