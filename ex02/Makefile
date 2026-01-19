@@ -6,7 +6,7 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/08 11:28:21 by rcochran          #+#    #+#              #
-#    Updated: 2026/01/15 14:01:39 by rcochran         ###   ########.fr        #
+#    Updated: 2026/01/15 17:57:41 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,14 @@ NAME		=	Bureaucrat
 OBJ_DIR		=	obj/
 SRC			=	src/
 INCLUDES	=	-I ./includes -MMD -MP
-FILES		= 	$(SRC)Bureaucrat.cpp \
-				$(MAIN)
+FILES		= 	$(MAIN) \
+				$(SRC)AForm.cpp \
+				$(SRC)Bureaucrat.cpp \
+				$(SRC)PresidentialPardonForm.cpp \
+				$(SRC)RobotomyRequestForm.cpp \
+				$(SRC)ShrubberyCreationForm.cpp
 
+				
 EXT			=	.cpp
 OBJ			=	$(patsubst $(SRC)%$(EXT), $(OBJ_DIR)%.o, $(FILES))
 
