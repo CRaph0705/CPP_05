@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:33:23 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/14 15:25:58 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/02/10 11:13:31 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ Bureaucrat::Bureaucrat( std::string name, int grade ) : _name(name)
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &cpy )
 {
+	if (this == &cpy)
+		return (*this);
 	std::cout<< "Bureaucrat overloaded operator= function called" << std::endl;
 	setGrade(cpy._grade);
 	return (*this);

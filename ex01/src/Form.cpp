@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 10:57:57 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/15 17:06:51 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/02/10 11:13:55 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ Form::Form( std::string name, bool is_signed, int signatory_grade, int execution
 }
 Form& Form::operator=( const Form &cpy )
 {
+	if (this == &cpy)
+		return (*this);
 	std::cout<< "Form overloaded operator= function called" << std::endl;
 	this->_is_signed = cpy._is_signed;
 	return (*this);
