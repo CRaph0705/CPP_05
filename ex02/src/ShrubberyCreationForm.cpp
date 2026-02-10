@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:45:48 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 15:11:11 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/02/10 11:16:23 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm &cpy)
 {
 	std::cout<< "ShrubberyCreationForm overloaded operator= function called" << std::endl;
-	if (this != &cpy)
+	if (this == &cpy)
 		return (*this);
 	return (*this);
 }

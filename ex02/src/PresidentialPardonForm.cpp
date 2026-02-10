@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:47:05 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 16:50:57 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/02/10 11:16:01 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &cpy
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &cpy)
 {
-	std::cout << "PresidentialPardonForm overloaded operator= function called." << std::endl;
-	if (this != &cpy)
+	if (this == &cpy)
 		return (*this);
+	std::cout << "PresidentialPardonForm overloaded operator= function called." << std::endl;
 	return (*this);
 }
 

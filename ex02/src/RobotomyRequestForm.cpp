@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:46:58 by rcochran          #+#    #+#             */
-/*   Updated: 2026/01/16 16:37:26 by rcochran         ###   ########.fr       */
+/*   Updated: 2026/02/10 11:16:10 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &cpy)
 {
 	std::cout<< "RobotomyRequestForm overloaded operator= function called" << std::endl;
-	if (this != &cpy)
+	if (this == &cpy)
 		return (*this);
 	return (*this);
 }
